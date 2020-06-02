@@ -31,12 +31,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 #page-home {
     background: url('../assets/home-background.svg') no-repeat;
-    height: 100vh;
+    height: 120vh;
     background-position: 35vw bottom;
+    /* background-color: yellow; */
 }
 #page-home .content {
     width: 90%;
-    height: 100%;
+    height: 80%;
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
