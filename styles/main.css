@@ -1,11 +1,17 @@
+/* variável global :root
+no caso, setado para cor */
 :root {
     --title-color: #322153;
     --primary-color: #34cb79;
+    --hover-color: #2fb86e;
 }
 
 * {
     margin: 0;
     padding: 0;
+    /* border-box: ajusta o tamanha da caixa 
+    e padding para o tamanho da caixa em max-width  */
+    box-sizing: border-box;
 }
 
 html {

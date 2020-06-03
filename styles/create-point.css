@@ -1,12 +1,111 @@
+/* border-style: solid;
+    border-color: red;
+    border-width: 5px;
+    background-color: white; */
+
 #page-create-point {
     width: 90%;
     max-width: 1100px;
+    /* alinhamento de caixa - pelo lado de fora da caixa */
     margin: 0 auto;
-    border: red;
-    border-width: 5px;
-    background-color: white;
 }
 #page-create-point header {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');
+    width: 20px;
+    height: 24px;
+    display: flex;
+}
+
+form {
+    background-color: white;
+    margin: 80px;
+    margin-top: 80px;
+    /* preenchimento */
+    padding: 64px; 
+    /* arredondamento dos cantos da caixa */
+    border-radius: 8px;
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+form legend {
+    margin-bottom: 40px;
+}
+form legend h2 {
+    font-size: 24px;
+}
+form .field {
+    /* display: inline; esse é o padrão */
+    /* flex coloca um elemento ao lado do outro */
+    display: flex;
+    /* para preenhcer todo a ãrea do form, usar flex 1 */
+    flex: 1;
+    /* column: coloca os elemento um embaixo do outro, em coluna */
+    flex-direction: column;
+    margin-bottom: 4 px;
+}
+form .field-group {
+    display: flex;
+}
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0px;
+    /* border: 1px red solid; */
+    /* padding usador era 16 e 24px, mas usando 24, o campo cai fora do espaço do form */
+    padding: 16px 24px;
+    /* outline: none - remove linha que aparece no campo ao digitar. Server para o usuário saber que ele está nesse campo. Usando lightgrey para o usuario saber onde ele está */
+    outline-color: lightgrey;
+    /* aumentar um pouco o tamanho da letra ao digitar no campo */
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* retira a seta do select do chrome e mozilla */
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+form .field-group .field + .field {
+    margin-left: 10px;
+}
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 40px;
+    border: 0px;
+    /* para tornar a entrada do hover mais lenta. Transition é aplicado em todo tipo de transição */
+    transition-property: background-color;
+    transition-duration: 400ms;
+}
+form button:hover {
+    background-color: var(--hover-color);
 }
