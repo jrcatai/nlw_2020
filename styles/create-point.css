@@ -45,7 +45,7 @@ form h1 {
 }
 form fieldset {
     margin-top: 64px;
-    border: 0;
+    border: none;
 }
 form legend {
     margin-bottom: 40px;
@@ -68,16 +68,22 @@ form .field-group {
 }
 form input, form select {
     background-color: #f0f0f5;
-    border: 0px;
+    border-width: 0 0 2px;
+    border-color: white;
+    outline: 0;
     /* border: 1px red solid; */
     /* padding usador era 16 e 24px, mas usando 24, o campo cai fora do espaço do form */
     padding: 16px 24px;
     /* outline: none - remove linha que aparece no campo ao digitar. Server para o usuário saber que ele está nesse campo. Usando lightgrey para o usuario saber onde ele está */
-    outline-color: lightgrey;
+    /* outline-; */
     /* aumentar um pouco o tamanho da letra ao digitar no campo */
     font-size: 16px;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+form input:focus {
+    border-color: var(--primary-color);
+    border-width: 0 0 2px;
 }
 /* retira a seta do select do chrome e mozilla */
 form select {
@@ -108,4 +114,5 @@ form button {
 }
 form button:hover {
     background-color: var(--hover-color);
+
 }
